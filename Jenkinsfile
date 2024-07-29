@@ -4,8 +4,7 @@ pipeline {
 - stages {
 - stage('Checkout GitHub repo') {
 - steps {
-- checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 
-'https://github.com/ankurroy4git/dockerdemo']])
+- checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[url: 'https://github.com/ankurroy4git/dockerdemo']])
 - }
 - }
 - stage('Build and Tag Docker Image') {
