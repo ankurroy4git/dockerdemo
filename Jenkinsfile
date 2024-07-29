@@ -29,7 +29,10 @@ steps {
 - stage('Deploy deployment and service file') {
 - steps {
 - script {
-- kubernetesDeploy configs: 'deploymentsvc.yaml', kubeconfigId: 'k8_auth'
+-kubernetesDeploy configs: '', kubeConfig: [path: ''], kubeconfigId: 'kubernet_ankur', secretName: '', ssh: [sshCredentialsId: '*', sshServer: ''], textCredentials: [certificateAuthorityData: '', clientCertificateData: '', clientKeyData: '', serverUrl: 'https://'] 
+
+
+//kubernetesDeploy configs: 'deploymentsvc.yaml', kubeconfigId: 'k8_auth'
 - }
 - }
 - } 
