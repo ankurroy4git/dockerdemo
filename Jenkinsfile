@@ -18,9 +18,9 @@ pipeline {
 - stage('Push the Docker Image to DockerHUb') 
 steps {
 - script {
-- withCredentials([string(credentialsId: 'docker_hub', variable: 'docker_hub')]) {
-- sh 'docker login -u ankur.roy@heritageit.edu -p ${docker_hub}'
-- }
+- withCredentials([string(credentialsId: 'docker_ankur', variable: 'docker_hub')]) {
+   sh 'docker login -u ankur.roy@heritageit.edu -p ${docker_hub}' // some block
+}
 - sh 'docker push ankurroy4docker/learning'
 - }
 - }
